@@ -20,10 +20,10 @@ __\(NOTE .. The first time   it starts up it will go straight to the webserver\)
           * then in "QUICK ACCESS MENU" open menu then under Miscellaneous select PlatformIO Core CLI
           * pio run --target erase
           * it may take more than one attempt
+![See Here](images/img01.png)
 1. Allow for OTA (Over The Air) updates by having a webserver on url:
    * http:\/\/(YourESP32IP)\/update 
      eg 
      http://192.168.2.42/update
      
      that will load a .bin up to the ESP32 and reboot.
-![See Here](images/img01.png)
