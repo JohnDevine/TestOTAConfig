@@ -19,9 +19,9 @@ __\(NOTE .. The first time   it starts up it will go straight to the webserver\)
           1. In VSC + Platformio extension\)Start CLI ... To get to CLI in LHS menu select PIO \(Ant Icon\)
           1. then click and open "QUICK ACCESS MENU" 
           1. then click Miscellaneous 1. then click PlatformIO Core CLI
-          3. the enter in the terminal window that opens 
-          * pio run --target erase
-          * it may take more than one attempt
+          1. the enter in the terminal window that opens 
+             * pio run --target erase
+          * __it may take more than one attempt__
 ![See Here](images/img01.png)
 1. Allow for OTA (Over The Air) updates by having a webserver on url:
    * http:\/\/(YourESP32IP)\/update 
