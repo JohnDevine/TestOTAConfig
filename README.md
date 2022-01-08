@@ -9,6 +9,7 @@ ___
 * Mac Mini Mac OS Catalina 10.15.7 
 * Visual Studio code Version: 1.63.2
 * Platformio Version: Core 5.2.4  Home 3.4.0
+* The libraries and versions are in the library section of the platformio.ini file 
 ___
 ## The objective:
  Is to have a base for an ESP32 that can:
