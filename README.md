@@ -16,10 +16,12 @@ ___
 __\(NOTE .. The first time   it starts up it will go straight to the webserver\)__
     * If it cannot find the one saved previously then open a captive portal web server and allow the user to connect to that and input the SSID and Password for the WiFi that you want to connect to and then to keep that entry and use that for subsequent boots.
         * __NOTE__ the credentials are held in NVR and the only way to totally remove them is to manually clear the NVR on the ESP.
+          
           1. In VSC + Platformio extension\)Start CLI ... To get to CLI in LHS menu select PIO \(Ant Icon\)
-          1. then click and open "QUICK ACCESS MENU" 
-          1. then click Miscellaneous 1. then click PlatformIO Core CLI
-          1. the enter in the terminal window that opens 
+          2. then click and open "QUICK ACCESS MENU" 
+          3. then click Miscellaneous 
+          4.  then click PlatformIO Core CLI
+          5. then enter in the terminal window that opens 
              * pio run --target erase
           * __it may take more than one attempt__
 ![See Here](images/img01.png)
