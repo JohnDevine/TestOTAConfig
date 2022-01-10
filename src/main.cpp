@@ -10,7 +10,7 @@
 
 #define ARDUINOTRACE_ENABLE true // Tracing (false = disable, true = enable)
 #include <ArduinoTrace.h>        //https://github.com/bblanchon/ArduinoTrace
-
+#include <jd_LEDLib.h>
 #if defined(ESP32)
 #define USE_SPIFFS true
 #define ESP_DRD_USE_EEPROM true
@@ -45,7 +45,8 @@ void setup()
 #endif
   TRACE();
 
-  pinMode(PIN_LED, OUTPUT);
+  // Initialise the LED status display
+  init_led(ESP32_LED_BUILTIN);
 
   drd = new DoubleResetDetector(DRD_TIMEOUT, DRD_ADDRESS);
   if (drd->detectDoubleReset())
@@ -64,7 +65,8 @@ void setup()
   if (initialConfig)
   {
     Serial.println(F("Starting Config Portal"));
-    digitalWrite(PIN_LED, HIGH);
+    blinkLED(ESP32_LED_BUILTIN, PIN_HIGH, false);
+    // digitalWrite(PIN_LED, HIGH);
     if (!ESPAsync_wifiManager.startConfigPortal())
     {
       Serial.println(F("Not connected to WiFi"));
@@ -79,7 +81,8 @@ void setup()
     WiFi.mode(WIFI_STA);
     WiFi.begin();
   }
-  digitalWrite(PIN_LED, LOW);
+  blinkLED(ESP32_LED_BUILTIN, PIN_LOW, false);
+  // digitalWrite(PIN_LED, LOW);
   unsigned long startedAt = millis();
   Serial.print(F("After waiting "));
   int connRes = WiFi.waitForConnectResult();
